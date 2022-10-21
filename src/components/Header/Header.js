@@ -2,6 +2,7 @@
 import styles from '../Header/Header.scss';
 
 function Header() {
+    const currentUser = true;
     return (
         <header className="header">
             <div className="header__wrapper">
@@ -19,8 +20,10 @@ function Header() {
                 </div>
                 <div className="header__items">
                     <div className="header__item1">
-                        <i class="fa-solid fa-plus"></i>
-                        <p className="upload__btn">Upload</p>
+                        <div className="item1__group">
+                            <i class="fa-solid fa-plus"></i>
+                            <p className="upload__btn">Upload</p>
+                        </div>
                     </div>
                     <button className="header__item2" type="button">
                         Login

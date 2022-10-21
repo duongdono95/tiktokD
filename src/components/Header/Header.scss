@@ -57,11 +57,35 @@
 .header__items {
     display: flex;
     align-items: center;
-    height: 3.5rem;
-
-    .header__item1 {
+    gap: 15px;
+}
+.header__item1 {
+    width: 11.5rem;
+    height: 3.6rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    .item1__group {
         display: flex;
         align-items: center;
-        width: 13.5rem;
+        margin: 0 auto;
+        gap: 8px;
     }
+    .fa-plus {
+        font-size: 16px;
+        color: #333;
+    }
+    .upload__btn {
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+    }
+}
+.header__item2 {
+    width: 11.5rem;
+    height: 3.6rem;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 5px;
 }
