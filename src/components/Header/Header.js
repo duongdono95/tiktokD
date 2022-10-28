@@ -1,8 +1,52 @@
 // eslint-disable-next-line
 import styles from '../Header/Header.scss';
 
+import Search from './Search/Search';
+import DotsMenu from './DotsMenu/DotsMenu';
+
+// declare the MenuItem
+const MENU__ITEMS = [
+    {
+        icon: <i className="fa-solid fa-earth-americas"></i>,
+        title: 'English',
+        children: {
+            title: 'Languages',
+            data: [
+                {
+                    type: 'language',
+                    code: 'En',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'Fr',
+                    title: 'French',
+                },
+                {
+                    type: 'language',
+                    code: 'Sp',
+                    title: 'Spanish',
+                },
+                {
+                    type: 'language',
+                    code: 'Vi',
+                    title: 'Vietnamese',
+                },
+            ],
+        },
+    },
+    {
+        icon: <i className="fa-solid fa-circle-info"></i>,
+        title: 'Feedback and Help',
+    },
+    {
+        icon: <i className="fa-solid fa-keyboard"></i>,
+        title: 'Keyboard shortcuts',
+    },
+];
+
 function Header() {
-    const currentUser = true;
+    // const currentUser = true;
     return (
         <header className="header">
             <div className="header__wrapper">
@@ -13,22 +57,20 @@ function Header() {
                         className="logo"
                     />
                 </div>
-                <div className="search">
-                    <input className="search__input" placeholder="Search Accounts and Videos" type="text" />
-                    <div className="search__divider"></div>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
+                <Search />
                 <div className="header__items">
                     <div className="header__item1">
                         <div className="item1__group">
-                            <i class="fa-solid fa-plus"></i>
+                            <i className="fa-solid fa-plus"></i>
                             <p className="upload__btn">Upload</p>
                         </div>
                     </div>
                     <button className="header__item2" type="button">
                         Login
                     </button>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <DotsMenu items={MENU__ITEMS}>
+                        <i className="fa-solid fa-ellipsis-vertical"></i>
+                    </DotsMenu>
                 </div>
             </div>
         </header>

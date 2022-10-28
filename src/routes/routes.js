@@ -1,9 +1,9 @@
 // Pages
-import Home from '~/pages/HomePage';
-import Following from '~/pages/FollowingPage';
-import Profile from '~/pages/ProfilePage';
-import Upload from '~/pages/UploadPage';
-import Search from '~/pages/SearchPage';
+import Home from '~/pages/HomePage/HomePage';
+import Following from '~/pages/FollowingPage/FollowingPage';
+import Profile from '~/pages/ProfilePAge/ProfilePage';
+import Upload from '~/pages/UploadPage/UploadPage';
+import Search from '~/pages/SearchPage/SearchPage';
 
 // Public routes
 const publicRoutes = [
