@@ -23,23 +23,30 @@
 }
 
 .header__items {
+    height: 45px;
     display: flex;
     align-items: center;
     gap: 15px;
 }
 .header__item1 {
-    width: 11.5rem;
-    height: 3.6rem;
     display: flex;
     align-items: center;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: white;
-    border-radius: 5px;
+
+    gap: 15px;
     .item1__group {
+        max-width: 11.5rem;
+        height: 3.6rem;
         display: flex;
+        flex-direction: row;
+        gap: 10px;
         align-items: center;
-        margin: 0 auto;
-        gap: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: white;
+        border-radius: 5px;
+        padding: 15px;
+    }
+    .item1__group:hover {
+        background-color: rgb(243, 243, 243);
     }
     .fa-plus {
         font-size: 16px;
@@ -48,13 +55,10 @@
     .upload__btn {
         font-size: 16px;
         font-weight: 500;
-
         color: #333;
     }
 }
-.header__item1:hover {
-    background-color: rgb(243, 243, 243);
-}
+
 .header__item2 {
     width: 11.5rem;
     height: 3.6rem;
@@ -69,9 +73,41 @@
     background-color: #f02750;
 }
 
+.header__item3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 120px;
+    .item3__container {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        height: 100%;
+        color: #333;
+    }
+}
+
+.message__icon {
+    position: relative;
+    padding: 15px;
+}
+.message__quantity {
+    padding: 2px 1px 2px 2px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background-color: #f02750;
+    color: white;
+    font-size: 10px;
+}
+
 .search_result__container {
     background-color: transparent;
 }
 .fa-ellipsis-vertical {
-    padding: 5px;
+    font-size: 20px;
+    padding: 15px 2px 10px 2px;
 }

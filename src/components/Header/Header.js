@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 import styles from '../Header/Header.scss';
-
+// import { useState } from 'react';
 import Search from './Search/Search';
 import DotsMenu from './DotsMenu/DotsMenu';
 
@@ -46,7 +46,10 @@ const MENU__ITEMS = [
 ];
 
 function Header() {
-    // const currentUser = true;
+    const currentUser = true;
+    const handleMenuChange = (menuItem) => {
+        switch (menuI)
+    }
     return (
         <header className="header">
             <div className="header__wrapper">
@@ -57,18 +60,38 @@ function Header() {
                         className="logo"
                     />
                 </div>
+
                 <Search />
                 <div className="header__items">
-                    <div className="header__item1">
-                        <div className="item1__group">
-                            <i className="fa-solid fa-plus"></i>
-                            <p className="upload__btn">Upload</p>
-                        </div>
-                    </div>
-                    <button className="header__item2" type="button">
-                        Login
-                    </button>
-                    <DotsMenu items={MENU__ITEMS}>
+                    {currentUser ? (
+                        <>
+                            <div className="header__item3">
+                                <div className="item3__container">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                </div>
+                                <div className="item3__container message__icon">
+                                    <p className="message__quantity">99+</p>
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div className="item3__container">
+                                    <i class="fa-solid fa-comments"></i>
+                                </div>
+                            </div>
+                        </>
+                    ) : (
+                        <>
+                            <div className="header__item1">
+                                <div className="item1__group">
+                                    <i className="fa-solid fa-plus"></i>
+                                    <p className="upload__btn">Upload</p>
+                                </div>
+                                <button className="header__item2" type="button">
+                                    Login
+                                </button>
+                            </div>
+                        </>
+                    )}
+                    <DotsMenu items={MENU__ITEMS} onChange={handleMenuChange}>
                         <i className="fa-solid fa-ellipsis-vertical"></i>
                     </DotsMenu>
                 </div>

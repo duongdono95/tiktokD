@@ -1,7 +1,7 @@
 // eslint-disable-next-line
-import styles from './Wrapper.scss';
+import styles from './PopperWrapper.scss';
 
-function Wrapper(children) {
+function Wrapper({ children }) {
     return <div className="wrapper">{children}</div>;
 }
 

@@ -1,15 +1,18 @@
 // eslint-disable-next-line
 import styles from './Search.scss';
-import SearchPopup from './SearchPopup';
+import SearchResultList from './SearchResultList';
 import Tippy from '@tippyjs/react/headless';
+import PopperWrapper from '~/components/PopperWrapper/PopperWrapper';
 
 function Search() {
     return (
         <Tippy
+            placement="bottom"
+            interactive
             render={(attrs) => (
-                <div className="search_result__container" tabIndex="-1" {...attrs}>
-                    <SearchPopup />
-                </div>
+                <PopperWrapper tabIndex="-1" {...attrs}>
+                    <SearchResultList />
+                </PopperWrapper>
             )}
         >
             <div className="search">

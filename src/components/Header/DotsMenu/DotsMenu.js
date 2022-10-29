@@ -1,6 +1,7 @@
 import Tippy from '@tippyjs/react/headless';
 // eslint-disable-next-line
 import styles from './DotsMenu.scss';
+import PopperWrapper from '~/components/PopperWrapper/PopperWrapper';
 
 import MenuItem from './MenuItem';
 
@@ -10,12 +11,13 @@ function DotsMenu({ children, items = [] }) {
     };
     return (
         <Tippy
+            interactive
             visible={true}
             placement="bottom-end"
             render={(attrs) => (
-                <div className="menu__wrapper" tabIndex="-1" {...attrs}>
-                    {renderItems()}
-                </div>
+                <PopperWrapper tabIndex="-1" {...attrs}>
+                    <div className="menu_list">{renderItems()}</div>
+                </PopperWrapper>
             )}
         >
             {children}

@@ -1,12 +1,9 @@
-.menu__wrapper {
-    margin-top: 18px;
-    background-color: white;
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
-    padding: 15px;
+.menu_list {
+    padding: 15px 0;
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
-    gap: 15px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .menu_item {
@@ -14,6 +11,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    padding: 20px 15px;
     &__icon {
         width: 20px;
         height: 20px;
@@ -25,7 +23,4 @@
     &:hover {
         background-color: rgba(22, 24, 35, 0.03);
     }
-}
-.menu_item:hover {
-    background-color: #333;
 }
