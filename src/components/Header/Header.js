@@ -10,26 +10,26 @@ const MENU__ITEMS = [
         icon: <i className="fa-solid fa-earth-americas"></i>,
         title: 'English',
         children: {
-            title: 'Languages',
+            header: 'Languages',
             data: [
                 {
                     type: 'language',
-                    code: 'En',
+                    icon: 'En',
                     title: 'English',
                 },
                 {
                     type: 'language',
-                    code: 'Fr',
+                    icon: 'Fr',
                     title: 'French',
                 },
                 {
                     type: 'language',
-                    code: 'Sp',
+                    icon: 'Sp',
                     title: 'Spanish',
                 },
                 {
                     type: 'language',
-                    code: 'Vi',
+                    icon: 'Vi',
                     title: 'Vietnamese',
                 },
             ],
@@ -47,9 +47,9 @@ const MENU__ITEMS = [
 
 function Header() {
     const currentUser = true;
-    const handleMenuChange = (menuItem) => {
-        switch (menuI)
-    }
+    // const handleMenuChange = (menuItem) => {
+    //     switch (menuI)
+    // }
     return (
         <header className="header">
             <div className="header__wrapper">
@@ -67,14 +67,14 @@ function Header() {
                         <>
                             <div className="header__item3">
                                 <div className="item3__container">
-                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                    <i className="fa-solid fa-cloud-arrow-up"></i>
                                 </div>
                                 <div className="item3__container message__icon">
                                     <p className="message__quantity">99+</p>
-                                    <i class="fa-solid fa-envelope"></i>
+                                    <i className="fa-solid fa-envelope"></i>
                                 </div>
                                 <div className="item3__container">
-                                    <i class="fa-solid fa-comments"></i>
+                                    <i className="fa-solid fa-comments"></i>
                                 </div>
                             </div>
                         </>
@@ -91,7 +91,7 @@ function Header() {
                             </div>
                         </>
                     )}
-                    <DotsMenu items={MENU__ITEMS} onChange={handleMenuChange}>
+                    <DotsMenu items={MENU__ITEMS}>
                         <i className="fa-solid fa-ellipsis-vertical"></i>
                     </DotsMenu>
                 </div>
